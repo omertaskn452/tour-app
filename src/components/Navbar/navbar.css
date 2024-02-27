@@ -1,0 +1,17 @@
+.navbar{
+  background-color: #16b1b9;
+}
+.navbar-link{
+  display: flex;
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  list-style-type: none;
+}
+.navbar-link-item + .navbar-link-item{
+  margin-left: 20px;
+}
+.navbar-link-item > a{
+  color: black;
+}
