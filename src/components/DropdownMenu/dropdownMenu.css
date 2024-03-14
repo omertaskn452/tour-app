@@ -1,10 +1,30 @@
 .dropdown-item{
   position: relative;
   margin-right: 20px;
+  cursor: pointer;
 }
-.rectangle{
+.dropdown-item:hover{
+  color: white;
+}
+.dropdown-menu{
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  top: 120%;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  border-radius: 10px;
+}
+.dropdown-menu-list{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  list-style-type: none;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+.dropdown-menu-list-item{
+  color: black;
+}
+.dropdown-menu-list-item:hover{
+  color: #1fdae4;
 }

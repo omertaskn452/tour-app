@@ -13,5 +13,8 @@
   margin-left: 20px;
 }
 .navbar-link-item > a{
+  color: rgb(255, 251, 35);
+}
+.navbar-link-item > a:hover{
   color: rgb(255, 255, 255);
 }

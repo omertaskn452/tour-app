@@ -1,5 +1,6 @@
 import React ,{useEffect, useState, useRef} from "react";
 import style from "./dropdownMenu.css"
+import { Link } from "react-router-dom";
 
 export default function DropdownMenu(props) {
 
@@ -20,13 +21,24 @@ export default function DropdownMenu(props) {
     } 
 },[props.isOpen, props.closeDropdown, props.id])
 
+  let tours = props.tours.map((item) => {
+    return <li>
+      <Link className="dropdown-menu-list-item" to="tour1">{item}</Link>
+    </li>
+  })
+
   return(
     <li
       className="dropdown-item" 
       ref={dropdownRef}
       onClick={()=>props.toggleIsOpen(props.id)}>
       {props.name}
-      {props.isOpen && <div onClick={(e)=> {e.stopPropagation()}} className="rectangle"></div>}
+      {props.isOpen && 
+        <div onClick={(e)=> {e.stopPropagation()}} className="dropdown-menu">
+          <ul className="dropdown-menu-list">
+             {tours}
+          </ul>
+        </div>}
     </li>
   )
 }
