@@ -59,6 +59,7 @@
   border: 1px solid #16b1b9;
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.3s ease-in;
 }
 .showroom-info-more-btn:hover{
   background-color:white;
