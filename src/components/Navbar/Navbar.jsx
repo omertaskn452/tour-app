@@ -1,51 +1,11 @@
 import React, {useState, useEffect, useRef} from "react";
 import style from "./navbar.css"
-import { nanoid } from "nanoid";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
+import toursData from "../../tourData"
 
 export default function Navbar() {
   
-  const [dropdownInfos, setDropdownInfos] = useState([
-    {
-      name: "Recommended Tours",
-      id: nanoid(),
-      isOpen: false,
-      tours: [
-        "Muğla - Dalaman",
-        "Muğla - Bodrum",
-        "Muğla - Fethiye",
-        "Muğla - Ölüdeniz",
-        "Muğla - Akyaka"
-      ]
-    },
-    {
-      name: "Private Tours",
-      id: nanoid(),
-      isOpen: false,
-      tours: [
-        "Antalya - Kemer",
-        "Antalya - Konyaaltı",
-        "Antalya - Alanya",
-        "Antalya - Kaleiçi",
-        "Antalya - Olymposs Ancient City"
-      ]
-    },
-    {
-      name: "Excursions",
-      id: nanoid(),
-      isOpen: false,
-      tours: [
-        "Knidos Ancient City",
-        "Bodrum Amphitheater",
-        "Dalyan River",
-        "Ölüdeniz",
-        "Düden Waterfalls",
-        "Kaleiçi",
-        "Konyaaltı Beach",
-        "Sapadere Canyon"
-      ]
-    }
-  ])
+  const [dropdownInfos, setDropdownInfos] = useState(toursData)
 
   const toggleIsOpen = (id) => {
     setDropdownInfos(prevState => {
@@ -74,8 +34,6 @@ export default function Navbar() {
       closeDropdown={closeDropdown}
     />
   })
-
-  console.log(dropdownInfos)
 
   return(
     <div className="navbar">

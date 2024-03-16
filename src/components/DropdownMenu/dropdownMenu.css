@@ -8,7 +8,6 @@
 }
 .dropdown-menu{
   position: absolute;
-  top: 120%;
   background-color: white;
   border: 1px solid black;
   color: black;
@@ -19,12 +18,23 @@
   flex-direction: column;
   width: max-content;
   list-style-type: none;
-  padding: 5px;
+  padding-left: 0;
   font-size: 1.1rem;
 }
 .dropdown-menu-list-item{
+  padding: 0 5px;
   color: black;
 }
+.dropdown-menu-list-item:first-child:hover{
+  border-radius: 9px 9px 0 0;
+}
+.dropdown-menu-list-item:last-child:hover{
+  border-radius: 0 0 9px 9px;
+}
 .dropdown-menu-list-item:hover{
-  color: #1fdae4;
+  background-color: #16b1b9;
+  color: white;
+}
+.dropdown-menu-link{
+  color: inherit;
 }

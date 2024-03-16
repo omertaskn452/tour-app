@@ -22,8 +22,8 @@ export default function DropdownMenu(props) {
 },[props.isOpen, props.closeDropdown, props.id])
 
   let tours = props.tours.map((item) => {
-    return <li>
-      <Link className="dropdown-menu-list-item" to="tour1">{item}</Link>
+    return <li className="dropdown-menu-list-item">
+      <Link className="dropdown-menu-link" to="tour1">{item}</Link>
     </li>
   })
 
