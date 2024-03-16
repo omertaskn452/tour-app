@@ -20,9 +20,7 @@ export default function Slider() {
       id={item.id}
       key={index}
       index={index}
-      name={item.name}
-      expo={item.expo}
-      img={item.img}
+      tours={toursData}
       selectedSlide={selectedSlide}
       nextSlide={nextSlide}
       previousSlide={previousSlide}
