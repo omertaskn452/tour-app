@@ -1,5 +1,5 @@
 .header{
-  padding: 10px;
+  padding: 10px 0;
 }
 .header-wrapper{
   display: flex;
@@ -16,6 +16,7 @@
 }
 .header-social{
   display: flex;
+  align-items: center;
   list-style-type: none;
 }
 .header-social-item + .header-social-item{

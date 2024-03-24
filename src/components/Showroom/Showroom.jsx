@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./showroom.css"
-import { CircleArrowLeft, CircleArrowRight, ArrowBigLeft, ArrowBigRight, ArrowLeft, ArrowRight, SquareArrowLeft, SquareArrowRight } from "lucide-react";
+import {CircleArrowLeft, CircleArrowRight} from "lucide-react";
 
 export default function Showroom({selectedSlide, index, tours, previousSlide, nextSlide}) {
 
@@ -13,17 +13,17 @@ export default function Showroom({selectedSlide, index, tours, previousSlide, ne
       <div className="showroom-info">
         <div className="showroom-info-transition">
           <div onClick={() => previousSlide()} className="showroom-info-transition-btn">
-            <CircleArrowLeft size={32}/>
-            <span className="showroom-trns-btn-text">Previous Deals</span>
+            <CircleArrowLeft className="transition-btn" size={32}/>
+            <span className="showroom-trns-btn-text hideOnMobile">Previous Deals</span>
           </div>
-          <div onClick={() => nextSlide()}className="showroom-info-transition-btn">
-            <span className="showroom-trns-btn-text">Next Deals</span>
-            <CircleArrowRight size={32}/>
+          <div onClick={() => nextSlide()} className="showroom-info-transition-btn">
+            <span className="showroom-trns-btn-text align-left hideOnMobile">Next Deals</span>
+            <CircleArrowRight  className="transition-btn" size={32}/>
           </div>
         </div>
         <div className="showroom-info-text">
-          <h1>{tours[index].name}</h1>
-          <p>{tours[index].expo}</p>
+          <h1 className="showroom-info-header">{tours[index].name}</h1>
+          <p className="hideOnMobile">{tours[index].expo}</p>
         </div>
         <button className="showroom-info-more-btn">More info</button>
       </div>

@@ -9,8 +9,8 @@
   font-weight: 500;
   list-style-type: none;
 }
-.navbar-link-item + .navbar-link-item{
-  margin-left: 20px;
+.navbar-link > li{
+  margin-right: 20px;
 }
 .navbar-link-item > a{
   color: #fffb23;
@@ -18,4 +18,12 @@
 }
 .navbar-link-item > a:hover{
   color: rgb(255, 255, 255);
+}
+@media(max-width:1024px){
+  .navbar-link{
+    font-size: 1rem;
+  }
+  .navbar-link > li{
+    margin-right: 10px;
+  }
 }

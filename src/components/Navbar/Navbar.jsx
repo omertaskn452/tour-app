@@ -1,30 +1,24 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import style from "./navbar.css"
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import toursData from "../../tourData"
 
 export default function Navbar() {
-  
-  const [dropdownInfos, setDropdownInfos] = useState(toursData)
 
-  const toggleIsOpen = (id) => {
-    setDropdownInfos(prevState => {
-      return prevState.map(item => {
-        return item.id === id ? {...item, isOpen: !item.isOpen} : item
-      })
-    })
-  }
+  const [dropdownInfos, setDropdownInfos] = useState(toursData.categories)
+
+  const toggleIsOpen = (id) => setDropdownInfos(prevState => prevState.map(item => item.id === id ? { ...item, isOpen: !item.isOpen } : item))
 
   const closeDropdown = (id) => {
     setDropdownInfos(prevState => {
       return prevState.map(item => {
-        return item.id === id ? {...item, isOpen: false} : item
+        return item.id === id ? { ...item, isOpen: false } : item
       })
     })
   }
 
   let dropdownItems = dropdownInfos.map((item) => {
-   return <DropdownMenu
+    return <DropdownMenu
       id={item.id}
       key={item.id}
       name={item.name}
@@ -35,8 +29,8 @@ export default function Navbar() {
     />
   })
 
-  return(
-    <div className="navbar">
+  return (
+    <div className="navbar hideOnMobile">
       <div className="container">
         <ul className="navbar-link">
           {dropdownItems}

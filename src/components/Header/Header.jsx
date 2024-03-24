@@ -7,10 +7,10 @@ import WhatsapIcon from "../Svg icons/wp/WhatsappIcon";
 
 export default function Header() {
   return(
-    <div className="header">
+    <div className="header hideOnMobile">
       <div className="container">
         <div className="header-wrapper">
-            <a href="#"><h1 className="header-logo">Qu-Travel</h1></a>
+            <a href="/"><h1 className="header-logo">Qu-Travel</h1></a>
             <div className="header-link">
               <ul className="header-social">
                 <li className="header-social-item"><a className="header-social-icon" href=""><FacebookIcon/></a></li>

@@ -11,7 +11,15 @@ body{
 a{
   text-decoration: none;
 }
+h1,h2,h3{
+  margin: 0;
+}
 .container{
-  width: 80%;
+  width: min(90%, 1200px);
   margin: 0 auto;
+}
+@media(max-width: 768px){
+  .hideOnMobile{
+    display: none;
+  }
 }

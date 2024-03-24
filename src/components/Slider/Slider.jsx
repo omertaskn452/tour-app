@@ -8,19 +8,19 @@ export default function Slider() {
   const [selectedSlide, setSelectedSlide] = useState(0)
 
   const nextSlide = () => {
-    selectedSlide === toursData.length - 1 ? setSelectedSlide(0) : setSelectedSlide(prevState => prevState + 1) 
+    selectedSlide === toursData.categories.length - 1 ? setSelectedSlide(0) : setSelectedSlide(prevState => prevState + 1) 
   }
 
   const previousSlide = () => {
-    selectedSlide === 0 ? setSelectedSlide((toursData.length - 1)) : setSelectedSlide(prevState => prevState - 1)
+    selectedSlide === 0 ? setSelectedSlide((toursData.categories.length - 1)) : setSelectedSlide(prevState => prevState - 1)
   }
 
-  let sliderItems = toursData.map((item, index) => {
+  let sliderItems = toursData.categories.map((item, index) => {
     return <Showroom
       id={item.id}
       key={index}
       index={index}
-      tours={toursData}
+      tours={toursData.categories}
       selectedSlide={selectedSlide}
       nextSlide={nextSlide}
       previousSlide={previousSlide}
@@ -28,12 +28,10 @@ export default function Slider() {
   })
 
   return(
-    <div className="slider-wrapper">
       <div className="container">
         <div className="slider">
           {sliderItems}
         </div>
       </div>
-    </div>
   )
 }

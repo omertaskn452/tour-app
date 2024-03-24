@@ -12,7 +12,6 @@
   z-index: 1;
   background-color: white;
   border: 1px solid black;
-  color: black;
   border-radius: 10px;
 }
 .dropdown-menu-list{
@@ -24,8 +23,8 @@
   font-size: 1.1rem;
 }
 .dropdown-menu-list-item{
-  padding: 0 5px;
-  color: black;
+  padding: 3px 5px;
+  color: rgb(0, 0, 0);
 }
 .dropdown-menu-list-item:first-child:hover{
   border-radius: 9px 9px 0 0;
@@ -39,4 +38,14 @@
 }
 .dropdown-menu-link{
   color: inherit;
+}
+@media(max-width: 768px){
+  .dropdown-item{
+    margin-right: 0;
+  }
+  .dropdown-menu{
+    position: relative;
+    width: fit-content;
+    color: #16b1b9;
+  }
 }
