@@ -5,7 +5,7 @@ import toursData from "../../tourData"
 
 export default function Slider() {
 
-  const carouselRef = useRef()
+  /* const carouselRef = useRef() */
 
   const [currentSlide, setCurrentSlide] = useState(0)
   const [touchStartX, setTouchStartX] = useState(null)
@@ -64,21 +64,24 @@ export default function Slider() {
       id={item.id}
       key={index}
       index={index}
+      currentSlide={currentSlide}
+      previousSlide={previousSlide}
+      nextSlide={nextSlide}
       tours={toursData.categories}
     />
   })
 
   return(
       <div className="container">
-        <div 
-          className="slider" 
-          ref={carouselRef}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-            {sliderItems}
-        </div>
+          <div
+            className="slider"
+            /* ref={carouselRef} */
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+              {sliderItems}
+          </div>
       </div>
   )
 }
