@@ -1,12 +1,26 @@
 .slider{
   display: flex;
   flex-direction: row;
-  overflow: hidden;
-  height: 450px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-height: 450px;
+  margin-right: 0;
+  padding-right: 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
 }
 
 @media(max-width: 425px){
   .slider{
     height: 300px;
+  }
+}
+@media(max-width: 768px){
+  .slider{
+    overflow-x: scroll;
   }
 }

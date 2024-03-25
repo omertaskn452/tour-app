@@ -2,9 +2,13 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
-  min-width: 100%;
   padding: 20px;
-  transition: translate 0.85s ease-in-out;
+  min-width: 100%;
+  scroll-snap-align: start;
+  transition: 0.5s ease;
+}
+.showroom + .showroom{
+  margin-left: 20px;
 }
 .showroom-hidden{
   display: none;
@@ -75,6 +79,9 @@
   .showroom{
     position: relative;
     padding: 20px 0 0 0;
+  }
+  .showroom-img{
+    margin-right: 0;
   }
   .showroom-info{ 
     position: absolute;
