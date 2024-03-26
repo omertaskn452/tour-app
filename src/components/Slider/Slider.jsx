@@ -8,6 +8,8 @@ export default function Slider() {
   /* const carouselRef = useRef() */
 
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [previousSlide, setPreviousSlide] = useState(2)
+  const [nextSlide, setNextSlide] = useState(1)
   const [touchStartX, setTouchStartX] = useState(null)
   const [touchEndX, setTouchEndX] = useState(null)
 
@@ -22,21 +24,38 @@ export default function Slider() {
     if(!touchEndX || !touchStartX) return;
     const delta = touchStartX - touchEndX
     if(delta > 50){
-      nextSlide()
+      handleNextSlide()
     }
     else if(delta < -50){
-      previousSlide()
+      handlePreviousSlide()
     }
   }
 
-  const nextSlide = () => {
-    const newSlide = (currentSlide + 1) % toursData.categories.length
-    setCurrentSlide(newSlide)
+  const calcSlideIndex = (value) => {
+    if(value === 0){
+      setPreviousSlide(toursData.categories.length - 1)
+    }
+    else{
+      setPreviousSlide(value - 1)
+    }
+    if(value === toursData.categories.length - 1){
+      setNextSlide(0)
+    }
+    else{
+      setNextSlide(value + 1)
+    }
   }
 
-  const previousSlide = () => {
+  const handleNextSlide = () => {
+    const newSlide = (currentSlide + 1) % toursData.categories.length
+    setCurrentSlide(newSlide)
+    calcSlideIndex(newSlide)
+  }
+
+  const handlePreviousSlide = () => {
     const newSlide = (currentSlide - 1 + toursData.categories.length) % toursData.categories.length
     setCurrentSlide(newSlide)
+    calcSlideIndex(newSlide)
   }
 /* 
   const moveSlider = (delta) => {
@@ -67,6 +86,9 @@ export default function Slider() {
       currentSlide={currentSlide}
       previousSlide={previousSlide}
       nextSlide={nextSlide}
+      handlePreviousSlide={handlePreviousSlide}
+      handleNextSlide={handleNextSlide}
+      calcSlideIndex={calcSlideIndex}
       tours={toursData.categories}
     />
   })

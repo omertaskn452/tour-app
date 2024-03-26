@@ -46,6 +46,20 @@ export default {
       ],
       expo: "Browse our wide range of tour deals. From cheap to expensive, from one-night to 1-month tours, choose the best tour for you",
       img: "img/sea imgs/sea1.jpg"
+    },
+    {
+      name: "Airport Transfer",
+      id: nanoid(),
+      isOpen: false,
+      tours: [
+        "Muğla - Dalaman",
+        "Muğla - Bodrum",
+        "Muğla - Fethiye",
+        "Muğla - Ölüdeniz",
+        "Muğla - Akyaka"
+      ],
+      expo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet porta urna. Vivamus cursus mattis auctor. Interdum et malesuada.",
+      img: "img/sea imgs/sea4.jpg"
     }
   ],
   tours: [
