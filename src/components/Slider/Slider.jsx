@@ -8,7 +8,7 @@ export default function Slider() {
   /* const carouselRef = useRef() */
 
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [previousSlide, setPreviousSlide] = useState(2)
+  const [previousSlide, setPreviousSlide] = useState((toursData.categories.length - 1))
   const [nextSlide, setNextSlide] = useState(1)
   const [touchStartX, setTouchStartX] = useState(null)
   const [touchEndX, setTouchEndX] = useState(null)

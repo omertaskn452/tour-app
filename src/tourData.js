@@ -50,16 +50,14 @@ export default {
     {
       name: "Airport Transfer",
       id: nanoid(),
-      isOpen: false,
-      tours: [
-        "Muğla - Dalaman",
-        "Muğla - Bodrum",
-        "Muğla - Fethiye",
-        "Muğla - Ölüdeniz",
-        "Muğla - Akyaka"
-      ],
       expo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet porta urna. Vivamus cursus mattis auctor. Interdum et malesuada.",
-      img: "img/sea imgs/sea4.jpg"
+      img: "img/stock/transport.jpg"
+    },
+    {
+      name: "Rent House",
+      id: nanoid(),
+      expo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet porta urna. Vivamus cursus mattis auctor. Interdum et malesuada.",
+      img: "img/stock/rent.jpg"
     }
   ],
   tours: [

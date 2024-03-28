@@ -31,7 +31,7 @@ export default function NavbarMobile(){
   }
 
   let dropdownItems = toursInfo.map((item) => {
-    return <DropdownMenu
+    if(Object.hasOwn(item, "tours")){return <DropdownMenu
       id={item.id}
       key={item.id}
       name={item.name}
@@ -39,7 +39,7 @@ export default function NavbarMobile(){
       isOpen={item.isOpen}
       toggleIsOpen={toggleIsOpen}
       closeDropdown={closeDropdown}
-    />
+    />}
   })
 
   return(
