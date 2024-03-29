@@ -1,0 +1,32 @@
+.transport{
+  padding: 20px 0;
+}
+.transport-img-wrapper{
+  height: 450px;
+  padding-bottom: 10px;
+}
+.transport-img{
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.transport-info *{
+  margin-bottom: 10px;
+}
+.transport-faq-list{
+  padding: 10px;
+  /* border: 1px solid #000000; */
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  cursor: pointer;
+}
+.transport-faq-list + .transport-faq-list{
+  margin-top: 10px;
+}
+.transport-faq-question{
+  display: flex;
+  justify-content: space-between;
+}
+.transport-faq-list-item{
+  margin-top: 5px;
+}

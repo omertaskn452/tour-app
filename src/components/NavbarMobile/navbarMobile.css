@@ -13,6 +13,9 @@ a{
 .hamburger-menu{
   padding-bottom: 10px;
 }
+.hamburger-menu-icon{
+  cursor: pointer;
+}
 .hamburger-menu-list{
   list-style-type: none;
   padding: 0;
@@ -24,8 +27,8 @@ a{
 .hamburger-menu-list > li + li {
   margin-top: 5px;
 }
-.hamburger-menu-list-item > a{
-  color: #fffb23;
+.hamburger-menu-link:hover{
+  color: white;
 }
 .hidden{
   display: none;

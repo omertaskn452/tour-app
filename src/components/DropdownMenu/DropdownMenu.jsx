@@ -23,7 +23,7 @@ export default function DropdownMenu(props) {
 
   let tours = props.tours.map((item) => {
     return <li className="dropdown-menu-list-item">
-      <Link className="dropdown-menu-link" to="tour1">{item}</Link>
+      <Link className="dropdown-menu-link" to="/tour1">{item}</Link>
     </li>
   })
 

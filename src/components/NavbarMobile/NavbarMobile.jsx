@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import style from "./navbarMobile.css"
 import {Menu, X} from "lucide-react";
+import { Link } from "react-router-dom";
 import tourData from "../../tourData"
 
 export default function NavbarMobile(){
@@ -46,14 +47,14 @@ export default function NavbarMobile(){
     <div className="navbar-mobile">
       <div className="container">
         <div className="navbar-mobile-wrapper">
-          <a href="#"><h2>Qu-Travel</h2></a>
-          {isMenuOpen ? <X size={40} onClick={()=>toggleIsMenuOpen()}/> : <Menu size={40} onClick={()=>toggleIsMenuOpen()}/>}
+          <Link to="/"><h2>Qu-Travel</h2></Link>
+          {isMenuOpen ? <X className="hamburger-menu-icon" size={40} onClick={()=>toggleIsMenuOpen()}/> : <Menu className="hamburger-menu-icon" size={40} onClick={()=>toggleIsMenuOpen()}/>}
         </div>
         {isMenuOpen && <div className={isMenuOpen ? "hamburger-menu" : "hidden"}>
             <ul className="hamburger-menu-list">
               {dropdownItems}
-              <li className="hamburger-menu-list-item"><a href="tour1">Airport Transfer</a></li>
-              <li className="hamburger-menu-list-item"><a href="tour1">Rent House</a></li>
+              <li className="hamburger-menu-list-item"><Link to="transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
+              <li className="hamburger-menu-list-item"><Link className="hamburger-menu-link">Rent House</Link></li>
             </ul>
           </div>}
       </div>

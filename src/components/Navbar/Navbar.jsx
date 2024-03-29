@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import style from "./navbar.css"
+import { Link } from "react-router-dom";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import toursData from "../../tourData"
 
@@ -34,8 +35,8 @@ export default function Navbar() {
       <div className="container">
         <ul className="navbar-link">
           {dropdownItems}
-          <li className="navbar-link-item"><a href="tour1">Airport Transfer</a></li>
-          <li className="navbar-link-item"><a href="#">Rent House</a></li>
+          <li className="navbar-link-item"><Link to="/transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
+          <li className="navbar-link-item"><Link to="/transfer" className="hamburger-menu-link">Rent House</Link></li>
         </ul>
       </div>
     </div>
