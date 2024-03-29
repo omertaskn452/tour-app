@@ -3,10 +3,9 @@ import React from "react";
 export default function WhatsapIcon() {
   return(
     <svg 
-      width="32" 
-      height="32" 
+      width="40" 
+      height="40" 
       viewBox="0 0 100 100" 
-      fill="currentColor" 
       xmlns="http://www.w3.org/2000/svg"
       className="svg-icon"
     >

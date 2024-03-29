@@ -8,6 +8,9 @@
     repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+.sliding-grid{
+  padding-bottom: 20px;
+}
 /* .sliding-grid{
   overflow: hidden;
   animation-duration: .5s;
