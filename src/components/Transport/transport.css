@@ -14,19 +14,33 @@
   margin-bottom: 10px;
 }
 .transport-faq-list{
-  padding: 10px;
+  display: grid;
+  grid-template-rows: min-content 0fr;
+  padding: 10px 10px 10px 0;
   /* border: 1px solid #000000; */
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset; */
   cursor: pointer;
+  transition: grid-template-rows .5s;
+}
+.transport-faq-list.active{
+  grid-template-rows: min-content 1fr;
+  padding-bottom: 20px;
+}
+.transport-faq-list.active > .transport-faq-expo{
+  
 }
 .transport-faq-list + .transport-faq-list{
-  margin-top: 10px;
+  border-top: 1px solid #dedede;
 }
 .transport-faq-question{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
-.transport-faq-list-item{
-  margin-top: 5px;
+.transport-faq-expo{
+  overflow: hidden;
+  padding-left: 24px;
+  transform: translateY(10px);
+}
+.second-p{
+  margin-top: 10px;
 }

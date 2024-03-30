@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import style from "./transport.css"
 import {nanoid} from "nanoid"
-import { CirclePlus, CircleMinus } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 export default function Tranport(){
   
@@ -23,13 +23,20 @@ export default function Tranport(){
     return <div 
       key={item.id}
       onClick={()=>toggleIsOpen(item.id)}
-      className="transport-faq-list"
+      className={`transport-faq-list ${item.isOpen ? "active" : ""}`}
       >
         <div className="transport-faq-question">
+          {item.isOpen ? <ChevronDown></ChevronDown> : <ChevronRight></ChevronRight>}
           <p>Lorem ipsum dolor sit amet?</p>
-          {item.isOpen ? <CircleMinus></CircleMinus> : <CirclePlus></CirclePlus>}
         </div>
-        {item.isOpen && <li className="transport-faq-list-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.</li>}
+        <div className="transport-faq-expo">
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.
+          </p>
+          <p className="second-p">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquam ex et odio fringilla, ut.
+          </p>
+        </div>
     </div>
   })
 
