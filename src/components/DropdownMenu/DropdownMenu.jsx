@@ -1,6 +1,7 @@
 import React ,{useEffect, useState, useRef} from "react";
 import style from "./dropdownMenu.css"
 import { Link } from "react-router-dom";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 export default function DropdownMenu(props) {
 
@@ -32,13 +33,15 @@ export default function DropdownMenu(props) {
       className="dropdown-item" 
       ref={dropdownRef}
       onClick={()=>props.toggleIsOpen(props.id)}>
-      {props.name}
-      {props.isOpen && 
-        <div onClick={(e)=> {e.stopPropagation()}} className="dropdown-menu">
+      <div className="dropdown-item-name">
+        {props.name}
+        <ChevronDown></ChevronDown>
+      </div>
+        <div onClick={(e)=> {e.stopPropagation()}} className={`dropdown-menu ${props.isOpen ? "active" : ""}`}>
           <ul className="dropdown-menu-list">
              {tours}
           </ul>
-        </div>}
+        </div>
     </li>
   )
 }

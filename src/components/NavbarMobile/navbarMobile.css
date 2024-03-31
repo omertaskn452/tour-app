@@ -5,13 +5,20 @@ a{
   background-color: #16b1b9;
 }
 .navbar-mobile-wrapper{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
 }
 .hamburger-menu{
+  display: grid;
+  grid-template-rows: 0fr;
   padding-bottom: 10px;
+  transition: grid-template-rows 500ms ease;
+}
+.hamburger-menu.active{
+  grid-template-rows: 1fr;
 }
 .hamburger-menu-icon{
   cursor: pointer;
@@ -20,6 +27,7 @@ a{
   list-style-type: none;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 .hamburger-menu-list > li{
   font-size: 1.2rem;
@@ -30,8 +38,8 @@ a{
 .hamburger-menu-link:hover{
   color: white;
 }
-.hidden{
-  display: none;
+.hamburger-menu-list-item{
+  height: 32px;
 }
 @media(min-width:769px){
   .navbar-mobile{

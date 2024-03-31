@@ -50,13 +50,13 @@ export default function NavbarMobile(){
           <Link to="/"><h2>Qu-Travel</h2></Link>
           {isMenuOpen ? <X className="hamburger-menu-icon" size={40} onClick={()=>toggleIsMenuOpen()}/> : <Menu className="hamburger-menu-icon" size={40} onClick={()=>toggleIsMenuOpen()}/>}
         </div>
-        {isMenuOpen && <div className={isMenuOpen ? "hamburger-menu" : "hidden"}>
-            <ul className="hamburger-menu-list">
+        <div className={`hamburger-menu ${isMenuOpen ? "active" : ""}`}>
+            <ul className={`hamburger-menu-list`}>
               {dropdownItems}
               <li className="hamburger-menu-list-item"><Link to="transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
               <li className="hamburger-menu-list-item"><Link className="hamburger-menu-link">Rent House</Link></li>
             </ul>
-          </div>}
+          </div>
       </div>
     </div>
   )

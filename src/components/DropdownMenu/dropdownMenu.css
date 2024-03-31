@@ -7,12 +7,26 @@
 .dropdown-item:hover{
   color: white;
 }
+.dropdown-item-name{
+  display: flex;
+  align-items: center;
+}
 .dropdown-menu{
   position: absolute;
+  top: 100%;
+  left: 0;
   z-index: 1;
+  display: grid;
+  grid-template-rows: 0fr;
   background-color: white;
-  border: 1px solid black;
   border-radius: 10px;
+  border: 1px solid black;
+  visibility: hidden;
+  transition: grid-template-rows 500ms ease, visibility 450ms ease;
+}
+.dropdown-menu.active{
+  visibility: visible;
+  grid-template-rows: 1fr;
 }
 .dropdown-menu-list{
   display: flex;
@@ -21,6 +35,7 @@
   list-style-type: none;
   padding-left: 0;
   font-size: 1.1rem;
+  overflow: hidden;
 }
 .dropdown-menu-list-item{
   padding: 3px 5px;

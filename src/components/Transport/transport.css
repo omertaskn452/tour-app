@@ -26,9 +26,6 @@
   grid-template-rows: min-content 1fr;
   padding-bottom: 20px;
 }
-.transport-faq-list.active > .transport-faq-expo{
-  
-}
 .transport-faq-list + .transport-faq-list{
   border-top: 1px solid #dedede;
 }
