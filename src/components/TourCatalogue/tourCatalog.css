@@ -7,19 +7,8 @@
   grid-template-columns: 
     repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-}
-.sliding-grid{
   padding-bottom: 20px;
 }
-/* .sliding-grid{
-  overflow: hidden;
-  animation-duration: .5s;
-  animation-name: slidein;
-}
-@keyframes slidein{
-  0% {transform: translateX(-100%);}
-  100% {transform: translateX(0%);}
-} */
 @media(max-width: 425px){
   .tour-grid{
     grid-template-columns:

@@ -1,12 +1,15 @@
 import React from "react";
 import style from "./tourCard.css"
+import { Link } from "react-router-dom";
 
-export default function TourCard({id, name, img, expo, price}) {
+export default function TourCard({id, name, img, expo, price, urlOrder}) {
   return(
     <div className="tour-card">
-      <div className="tour-card-img-wrapper tour-card-flex-item">
-        <img className="tour-card-img" src={img} alt="" />
-      </div>
+       <Link to={`/tours/${urlOrder}`}> 
+        <div className="tour-card-img-wrapper tour-card-flex-item">
+          <img className="tour-card-img" src={img} alt="" />
+        </div>
+       </Link>
       <div className="tour-card-text tour-card-flex-item">
         <h3>{name}</h3>
         <p>{expo}</p>

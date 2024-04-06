@@ -14,7 +14,8 @@ export default {
         "Muğla - Akyaka"
       ],
       expo: "The cheapest and best tours for you are here. These tours, selected by Our Well-qualified Guides, offer the best opportunities for people who love to travel",
-      img: "img/sea imgs/sea3.jpg"
+      img: "img/sea imgs/sea3.jpg",
+      urlName: "recommended-tours"
     },
     {
       name: "Private Tours",
@@ -28,7 +29,8 @@ export default {
         "Antalya - Olymposs Ancient City"
       ],
       expo: "These private tours offers to you unique experiences. Check out our opportunities to experience many different things you have never done or seen before",
-      img: "img/sea imgs/sea2.jpg"
+      img: "img/sea imgs/sea2.jpg",
+      urlName: "private-tours"
     },
     {
       name: "Excursions",
@@ -45,19 +47,22 @@ export default {
         "Sapadere Canyon"
       ],
       expo: "Browse our wide range of tour deals. From cheap to expensive, from one-night to 1-month tours, choose the best tour for you",
-      img: "img/sea imgs/sea1.jpg"
+      img: "img/sea imgs/sea1.jpg",
+      urlName: "excursions"
     },
     {
       name: "Airport Transfer",
       id: nanoid(),
       expo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet porta urna. Vivamus cursus mattis auctor. Interdum et malesuada.",
-      img: "img/stock/transport.jpg"
+      img: "img/stock/transport.jpg",
+      urlName: "airport-transfer"
     },
     {
       name: "Rent House",
       id: nanoid(),
       expo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet porta urna. Vivamus cursus mattis auctor. Interdum et malesuada.",
-      img: "img/stock/rent.jpg"
+      img: "img/stock/rent.jpg",
+      urlName: "rent-house"
     }
   ],
   tours: [

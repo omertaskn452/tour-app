@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./showroom.css"
+import { Link } from "react-router-dom";
 import {CircleArrowLeft, CircleArrowRight, ChevronLeft, ChevronRight} from "lucide-react";
 
 export default function Showroom({currentSlide, previousSlide, nextSlide, index, tours, handlePreviousSlide, handleNextSlide, calcSlideIndex}) {
@@ -37,7 +38,7 @@ export default function Showroom({currentSlide, previousSlide, nextSlide, index,
           <h1 className="showroom-info-header">{tours[index].name}</h1>
           <p className="hideOnTablet">{tours[index].expo}</p>
         </div>
-        <button className="showroom-info-more-btn">More info</button>
+        <Link to={`/${tours[index].urlName}`}><button className="showroom-info-more-btn">More info</button></Link>
       </div>
     </div>
   )

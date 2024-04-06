@@ -53,7 +53,7 @@ export default function NavbarMobile(){
         <div className={`hamburger-menu ${isMenuOpen ? "active" : ""}`}>
             <ul className={`hamburger-menu-list`}>
               {dropdownItems}
-              <li className="hamburger-menu-list-item"><Link to="transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
+              <li className="hamburger-menu-list-item"><Link to="/transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
               <li className="hamburger-menu-list-item"><Link className="hamburger-menu-link">Rent House</Link></li>
             </ul>
           </div>

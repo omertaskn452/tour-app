@@ -1,17 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Main from './pages/Main/Main';
-import Tour1 from './pages/Tours/Tour1/Tour1';
+import Tour from './pages/Tour/Tour';
 import Transfer from './pages/Transfer/Transfer';
+import TourCat from './pages/TourCat/TourCat';
 
 function App() {
   return (
-    <Router>
       <Routes>
-        <Route exact path="/" element={<Main/>}/>
-        <Route path="tour1" element={<Tour1/>}/>
-        <Route path="transfer" element={<Transfer/>}/>
+        <Route path="/">
+          <Route index element={<Main/>}/>
+          <Route path=":categoryId" element={<TourCat/>}/>
+        </Route>
+        <Route path="/transfer" element={<Transfer/>}/>
+        <Route path='/tours/:id' element={<Tour/>}/>
       </Routes>
-    </Router>
   );
 }
 
