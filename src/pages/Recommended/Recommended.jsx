@@ -1,28 +1,25 @@
 import React from "react";
-import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
-import Slider from "../../components/Slider/Slider";
-import TourCatalog from "../../components/TourCatalogue/TourCatalog";
 import NavbarMobile from "../../components/NavbarMobile/NavbarMobile";
+import Header from "../../components/Header/Header";
+import TourCatalog from "../../components/TourCatalogue/TourCatalog";
 import Footer from "../../components/Footer/Footer";
+import style from "./recommended.css"
 import tourData from "../../tourData";
 
-export default function Main() {
+export default function Recommended(){
   
-  const recommendedTours = tourData.find((item) => item.name === "Recommended Tours")
-  console.log(recommendedTours)
+  const recommendedTours = tourData.find((item) => item.name === "Recommended Tours") 
 
   return(
     <>
       <Header/>
       <Navbar/>
       <NavbarMobile/>
-      <Slider/>
       <TourCatalog
         categoryInfo={recommendedTours}
       />
       <Footer/>
     </>
-    
   )
 }

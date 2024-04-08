@@ -8,7 +8,7 @@ export default function Slider() {
   /* const carouselRef = useRef() */
 
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [previousSlide, setPreviousSlide] = useState((toursData.categories.length - 1))
+  const [previousSlide, setPreviousSlide] = useState((toursData.length - 1))
   const [nextSlide, setNextSlide] = useState(1)
   const [touchStartX, setTouchStartX] = useState(null)
   const [touchEndX, setTouchEndX] = useState(null)
@@ -33,12 +33,12 @@ export default function Slider() {
 
   const calcSlideIndex = (value) => {
     if(value === 0){
-      setPreviousSlide(toursData.categories.length - 1)
+      setPreviousSlide(toursData.length - 1)
     }
     else{
       setPreviousSlide(value - 1)
     }
-    if(value === toursData.categories.length - 1){
+    if(value === toursData.length - 1){
       setNextSlide(0)
     }
     else{
@@ -47,13 +47,13 @@ export default function Slider() {
   }
 
   const handleNextSlide = () => {
-    const newSlide = (currentSlide + 1) % toursData.categories.length
+    const newSlide = (currentSlide + 1) % toursData.length
     setCurrentSlide(newSlide)
     calcSlideIndex(newSlide)
   }
 
   const handlePreviousSlide = () => {
-    const newSlide = (currentSlide - 1 + toursData.categories.length) % toursData.categories.length
+    const newSlide = (currentSlide - 1 + toursData.length) % toursData.length
     setCurrentSlide(newSlide)
     calcSlideIndex(newSlide)
   }
@@ -78,7 +78,7 @@ export default function Slider() {
   } */
 
 
-  let sliderItems = toursData.categories.map((item, index) => {
+  let sliderItems = toursData.map((item, index) => {
     return <Showroom
       id={item.id}
       key={index}
@@ -89,7 +89,7 @@ export default function Slider() {
       handlePreviousSlide={handlePreviousSlide}
       handleNextSlide={handleNextSlide}
       calcSlideIndex={calcSlideIndex}
-      tours={toursData.categories}
+      tours={toursData}
     />
   })
 

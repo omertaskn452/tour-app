@@ -89,6 +89,7 @@
 .showroom-info-more-btn{
   background-color: #12949b;
   color: white;
+  width: 100%;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   border: 1px solid rgb(22, 177, 185);

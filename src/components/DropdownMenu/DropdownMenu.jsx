@@ -2,6 +2,7 @@ import React ,{useEffect, useState, useRef} from "react";
 import style from "./dropdownMenu.css"
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { nanoid } from "nanoid";
 
 export default function DropdownMenu(props) {
 
@@ -22,9 +23,11 @@ export default function DropdownMenu(props) {
     } 
 },[props.isOpen, props.closeDropdown, props.id])
 
-  let tours = props.tours.map((item) => {
-    return <li className="dropdown-menu-list-item">
-      <Link className="dropdown-menu-link" to="/tour1">{item}</Link>
+  let tours = props.tours.map((item, index) => {
+    return <li 
+      key={nanoid()}
+      className="dropdown-menu-list-item">
+      <Link className="dropdown-menu-link" to={`/${props.urlName}/${index}`}>{item.name}</Link>
     </li>
   })
 

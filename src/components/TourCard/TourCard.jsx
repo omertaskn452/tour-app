@@ -2,10 +2,10 @@ import React from "react";
 import style from "./tourCard.css"
 import { Link } from "react-router-dom";
 
-export default function TourCard({id, name, img, expo, price, urlOrder}) {
+export default function TourCard({id, name, img, expo, price, urlOrder, categoryUrl}) {
   return(
     <div className="tour-card">
-       <Link to={`/tours/${urlOrder}`}> 
+       <Link to={`/${categoryUrl}/${urlOrder}`}> 
         <div className="tour-card-img-wrapper tour-card-flex-item">
           <img className="tour-card-img" src={img} alt="" />
         </div>

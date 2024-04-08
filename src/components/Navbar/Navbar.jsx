@@ -6,7 +6,7 @@ import toursData from "../../tourData"
 
 export default function Navbar() {
 
-  const [dropdownInfos, setDropdownInfos] = useState(toursData.categories)
+  const [dropdownInfos, setDropdownInfos] = useState(toursData)
 
   const toggleIsOpen = (id) => setDropdownInfos(prevState => prevState.map(item => item.id === id ? { ...item, isOpen: !item.isOpen } : item))
 
@@ -25,6 +25,7 @@ export default function Navbar() {
       name={item.name}
       tours={item.tours}
       isOpen={item.isOpen}
+      urlName={item.urlName}
       toggleIsOpen={toggleIsOpen}
       closeDropdown={closeDropdown}
     />}
@@ -35,8 +36,8 @@ export default function Navbar() {
       <div className="container">
         <ul className="navbar-link">
           {dropdownItems}
-          <li className="navbar-link-item"><Link to="/transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
-          <li className="navbar-link-item"><Link to="/transfer" className="hamburger-menu-link">Rent House</Link></li>
+          <li className="navbar-link-item"><Link to="/airport-transfer" className="hamburger-menu-link">Airport Transfer</Link></li>
+          <li className="navbar-link-item"><Link to="/airport-transfer" className="hamburger-menu-link">Rent House</Link></li>
         </ul>
       </div>
     </div>

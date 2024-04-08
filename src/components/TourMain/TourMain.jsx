@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import style from "./tourMain.css"
 import tourData from "../../tourData";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
+import { toBeRequired } from "@testing-library/jest-dom/matchers";
 
 export default function TourMain(){
   
-  const {id} = useParams()
-
+  const {categoryInfo ,id} = useParams()
   console.log(id)
-  console.log(tourData.tours[id].img)
+  console.log(categoryInfo)
+
+  const tourInfo = tourData.find((item) => item.urlName === categoryInfo).tours[id]
+  console.log(tourInfo.img)
 
   return(
     <div className="container">
       <div className="tour-section">
-        <img src={`/${tourData.tours[id].img}`} alt />
-        <p>I'm tour {id}</p>
+        <p>{tourInfo.name}</p>
+        <img src={`/${tourInfo.img}`} alt="" />
       </div>
     </div>
   )
