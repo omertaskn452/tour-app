@@ -10,7 +10,8 @@ import tourData from "../../tourData";
 export default function Main() {
   
   const recommendedTours = tourData.find((item) => item.name === "Recommended Tours")
-  console.log(recommendedTours)
+  const privateTours = tourData.find((item) => item.name === "Private Tours")
+  const excursions = tourData.find((item) => item.name === "Excursions")
 
   return(
     <>
@@ -20,6 +21,12 @@ export default function Main() {
       <Slider/>
       <TourCatalog
         categoryInfo={recommendedTours}
+      />
+      <TourCatalog
+        categoryInfo={privateTours}
+      />
+      <TourCatalog
+        categoryInfo={excursions}
       />
       <Footer/>
     </>

@@ -1,6 +1,7 @@
 .footer-wrapper{
   background-color: #16b1b9;
   padding: 20px 0;
+  margin-top: auto;
 }
 .footer ul{
   list-style-type: none;

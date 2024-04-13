@@ -1,0 +1,52 @@
+.tour{
+  display: flex;
+  flex-direction: column;
+}
+.tour-img-wrapper{
+  margin-top: 20px;
+  height: 500px;
+}
+.tour-img{
+  height: 100%;
+  border-radius: 30px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+.tour-header{
+  text-align: center;
+}
+.tour-specs{
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(200px, 1fr));
+  margin: 10px 0;
+}
+.tour-specs-item{
+  padding: 10px;
+}
+.tour-includes{
+  background-color: #1c231f;
+  color: white;
+}
+.tour-excludes{
+  background-color: #EEEEEE;
+}
+.tour-specs-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.tour-specs-list-item{
+  display: flex;
+  align-items: center;
+}
+.tour-specs-icon{
+  width: 1.25rem;
+  margin-right: 5px;
+}
+.plus-icon{
+  color: #078000;
+}
+.minus-icon{
+  color: #fe0000;
+}

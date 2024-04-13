@@ -38,6 +38,7 @@ export default function NavbarMobile(){
       name={item.name}
       tours={item.tours}
       isOpen={item.isOpen}
+      urlName={item.urlName}
       toggleIsOpen={toggleIsOpen}
       closeDropdown={closeDropdown}
     />}

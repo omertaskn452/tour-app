@@ -15,9 +15,9 @@ function App() {
         <Route path="/recommended-tours" element={<Recommended/>}/>
         <Route path="/private-tours" element={<Private/>}/>
         <Route path="/excursions" element={<Excursions/>}/>
-        <Route path='/:categoryInfo/:id' element={<Tour/>}/>
+        <Route path="/:categoryInfo/:id" element={<Tour/>}/>
         <Route path="/airport-transfer" element={<Transfer/>}/>
-        <Route path='*' element={<Error/>}/>
+        <Route path= "*" element={<Error/>}/>
       </Routes>
   );
 }
